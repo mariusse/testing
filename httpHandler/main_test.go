@@ -13,6 +13,8 @@ func router() *http.ServeMux {
 	return router
 }
 
+// inspirert fra nett. Er den riktig? Må/burde vel kalle response.Result()?
+// noe voldsomt med mux og kanskje?
 func TestIndex(t *testing.T) {
 	request, _ := http.NewRequest("GET", "/", nil)
 	response := httptest.NewRecorder()
