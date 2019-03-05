@@ -17,6 +17,6 @@ func TestIndex(t *testing.T) {
 	response := httptest.NewRecorder()
 	router().ServeHTTP(response, request)
 	if response.Body.String() != "Hello, World" {
-		t.Errorf("\nexpected %s, got %s", "Hello, World", response.Body.String())
+		t.Errorf("\nexpected: Hello, World\ngot: %s", response.Body.String())
 	}
 }
