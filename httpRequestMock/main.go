@@ -36,11 +36,11 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(response.StatusCode)
+	fmt.Println(response.StatusCode) // 555
 	b, err := ioutil.ReadAll(response.Body)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(string(b))
+	fmt.Println(string(b)) // "OK"
 }
